@@ -11,8 +11,16 @@ data class Games(
     val developer: String,
     val genre: String,
     val score: Int,
-    val img: String,
+    val img: String?,
     val release: String,
     val consoles: String,
-    val reviews: List<Review>
-        )
+        ){
+    var reviews: List<Review>?
+        get() {
+            return this.reviews
+        }
+        set(value) {
+            this.reviews = value
+        }
+
+}

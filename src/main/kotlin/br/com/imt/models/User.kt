@@ -8,6 +8,14 @@ data class User(
     val name: String,
     val email: String,
     val password: String,
-    val img: String,
-    val reviews: List<Review>
+    val img: String?,
 )
+{
+    var reviews: List<Review>
+        get() {
+            return this.reviews
+        }
+        set(value) {
+            this.reviews = value
+        }
+}
