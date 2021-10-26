@@ -16,6 +16,10 @@ class UserDAO(val connectionString: String): IBaseDAO<User>{
         connection.close()
     }
 
+    override fun update(obj: User) {
+        TODO("Not yet implemented")
+    }
+
     override fun delete(id: Int) {
         val connection = DriverManager.getConnection(connectionString)
         val preparedStatement = connection.prepareStatement("""

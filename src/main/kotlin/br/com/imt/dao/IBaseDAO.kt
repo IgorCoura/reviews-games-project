@@ -7,6 +7,7 @@ import java.sql.PreparedStatement
 import java.sql.ResultSet
  interface IBaseDAO<T> {
      fun insert(obj: T);
+     fun update(obj: T);
      fun delete(id: Int);
      fun get(id: Int): T;
      fun getAll(): List<T>;

@@ -1,15 +1,12 @@
-package br.com.imt.models
+package br.com.imt.dto
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class User(
+data class UserGamesDTO (
     val id: Int,
     val name: String,
     val email: String,
     val password: String,
-    val img: String?,
-)
-{
-    var reviews = mutableListOf<Review>()
-}
+    val img: String?
+    )

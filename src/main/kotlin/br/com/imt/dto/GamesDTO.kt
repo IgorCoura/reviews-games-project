@@ -1,6 +1,9 @@
-package br.com.imt.models
+package br.com.imt.dto
 
-data class Games(
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class GamesDTO (
     val id: Int,
     val name: String,
     val summary: String,
@@ -9,7 +12,5 @@ data class Games(
     val score: Int,
     val img: String?,
     val release: String,
-    val consoles: String,
-        ){
-    var reviews = mutableListOf<Review>()
-}
+    val consoles: String
+    )

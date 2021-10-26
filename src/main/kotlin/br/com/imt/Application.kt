@@ -8,6 +8,7 @@ import br.com.imt.models.Review
 import br.com.imt.models.User
 import br.com.imt.routes.registerGamesRoutes
 import br.com.imt.routes.registerUserRoutes
+import br.com.imt.service.GamesService
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.response.*
@@ -24,9 +25,10 @@ fun main() {
 }
 
 fun Application.module(){
+    val connectionString = "jdbc:sqlite:ReviewsGamesDb.db"
     install(ContentNegotiation){
         json()
     }
-    registerGamesRoutes()
+    registerGamesRoutes(GamesService(GamesDAO(connectionString)))
     registerUserRoutes()
 }

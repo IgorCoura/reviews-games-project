@@ -18,6 +18,10 @@ class ReviewDAO(val connectionString: String) : IBaseDAO<Review>{
         connection.close()
     }
 
+    override fun update(obj: Review) {
+        TODO("Not yet implemented")
+    }
+
     override fun delete(id: Int) {
         val connection = DriverManager.getConnection(connectionString)
         val preparedStatement = connection.prepareStatement("""
