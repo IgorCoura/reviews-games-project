@@ -1,10 +1,11 @@
 package br.com.imt.dao
 
+import br.com.imt.interfaces.IDaoGames
 import br.com.imt.models.Games
 import br.com.imt.models.Review
 import java.sql.DriverManager
 
-class GamesDAO (val connectionString: String): IBaseDAO<Games>{
+class GamesDAO (val connectionString: String): IDaoGames {
 
     override fun insert(obj: Games){
         val connection = DriverManager.getConnection(connectionString)

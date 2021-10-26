@@ -7,8 +7,11 @@ import br.com.imt.models.Games
 import br.com.imt.models.Review
 import br.com.imt.models.User
 import br.com.imt.routes.registerGamesRoutes
+import br.com.imt.routes.registerReviewRoutes
 import br.com.imt.routes.registerUserRoutes
 import br.com.imt.service.GamesService
+import br.com.imt.service.ReviewService
+import br.com.imt.service.UserService
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.response.*
@@ -30,5 +33,6 @@ fun Application.module(){
         json()
     }
     registerGamesRoutes(GamesService(GamesDAO(connectionString)))
-    registerUserRoutes()
+    registerUserRoutes(UserService(UserDAO(connectionString)))
+    registerReviewRoutes(ReviewService(ReviewDAO(connectionString)))
 }

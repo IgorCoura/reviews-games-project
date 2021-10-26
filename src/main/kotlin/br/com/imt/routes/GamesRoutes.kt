@@ -1,19 +1,15 @@
 package br.com.imt.routes
 
-import br.com.imt.dao.GamesDAO
-import br.com.imt.dao.IBaseDAO
 import br.com.imt.dto.CreateGamesDTO
 import br.com.imt.dto.GamesDTO
-import br.com.imt.models.Games
-import br.com.imt.models.Review
-import br.com.imt.service.GamesService
+import br.com.imt.interfaces.IServiceGames
 import io.ktor.application.*
 import io.ktor.http.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
 
-fun Route.GamesRoutes(service: GamesService){
+fun Route.GamesRoutes(service: IServiceGames){
     route("/games"){
         post {
             val obj = call.receive<CreateGamesDTO>()
@@ -48,7 +44,7 @@ fun Route.GamesRoutes(service: GamesService){
     }
 }
 
-fun Application.registerGamesRoutes(service: GamesService){
+fun Application.registerGamesRoutes(service: IServiceGames){
     routing {
         GamesRoutes(service)
     }
