@@ -1,0 +1,1 @@
+web: java -jar target/br-com-imt-reviews-games-project-0.0.1
