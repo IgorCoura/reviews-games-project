@@ -1,1 +1,1 @@
-web: java -cp target/dependency/*:target/classes/ br.com.imt.ApplicationKt
+web: java -cp target/classes/br/com/imt/ApplicationKt.class
