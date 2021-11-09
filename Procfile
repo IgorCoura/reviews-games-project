@@ -1,1 +1,1 @@
-web: java -cp target/dependency/*:target/classes/ org.jetbrains.ktor.netty.DevelopmentHost
+web: java -cp target/dependency/*:target/classes/ br.com.imt.ApplicationKt
