@@ -36,23 +36,29 @@ class ReviewDAO(val connectionString: String) : IDaoReview{
         connection.close()
     }
 
-    override fun delete(id: Int) {
+    override fun delete(id: Int, userId: Int) {
         val connection = DriverManager.getConnection(connectionString)
         val preparedStatement = connection.prepareStatement("""
             DELETE FROM Review  
-            WHERE id = ?;
+            WHERE id = ? AND UserId = ?;
             """.trimMargin())
         preparedStatement?.setInt(1,id)
+        preparedStatement?.setInt(2,userId)
         preparedStatement?.executeUpdate()
         connection.close()
     }
 
 
 
-    override fun get(id: Int): Review {
+    override fun get(id: Int, userId: Int): Review {
         val connection = DriverManager.getConnection(connectionString)
-        val sqlStatement = connection.createStatement()
-        val resultSet = sqlStatement.executeQuery("SELECT * FROM Review WHERE id == ${id};")
+        val preparedStatement = connection.prepareStatement("""
+            SELECT * FROM Review  
+            WHERE id = ? AND UserId = ?;
+            """.trimMargin())
+        preparedStatement?.setInt(1,id)
+        preparedStatement?.setInt(2,userId)
+        val resultSet = preparedStatement.executeQuery()
         val review = Review(
             resultSet.getInt("Id"),
             resultSet.getInt("GameId"),
@@ -62,7 +68,7 @@ class ReviewDAO(val connectionString: String) : IDaoReview{
             resultSet.getString("Date")
         )
         resultSet.close()
-        sqlStatement.close()
+        preparedStatement.close()
         connection.close()
         return review
     }

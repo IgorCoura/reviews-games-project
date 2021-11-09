@@ -8,6 +8,7 @@ data class User(
     val email: String,
     val password: String,
     val img: String?,
+    val salt: String
 )
 {
     var reviews = mutableListOf<Review>()

@@ -3,6 +3,7 @@ package br.com.imt.interfaces
 import br.com.imt.dto.*
 
 interface IServiceUser {
+    fun login(login: LoginDTO): String
     fun insert(obj: CreateUserDTO)
     fun update(obj: UpdateUserDTO)
     fun getAll(): List<UserDTO>

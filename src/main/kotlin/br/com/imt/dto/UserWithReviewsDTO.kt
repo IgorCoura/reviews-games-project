@@ -8,8 +8,7 @@ data class UserWithReviewsDTO(
     val id: Int,
     val name: String,
     val email: String,
-    val img: String?,
     )
 {
-    var reviews= listOf<ReviewDTO>()
+    var reviews= listOf<ReviewUserDTO>()
 }

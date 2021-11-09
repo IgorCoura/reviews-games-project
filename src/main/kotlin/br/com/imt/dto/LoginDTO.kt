@@ -1,4 +1,10 @@
 package br.com.imt.dto
 
-class loginDTO {
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class LoginDTO(
+    val email: String,
+    val password: String
+) {
 }

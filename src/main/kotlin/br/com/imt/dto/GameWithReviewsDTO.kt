@@ -15,6 +15,6 @@ data class GameWithReviewsDTO (
     val release: String,
     val consoles: String,
     ){
-    var reviews= listOf<ReviewDTO>()
+    var reviews= listOf<ReviewGamesDTO>()
 
 }
