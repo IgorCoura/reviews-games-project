@@ -46,7 +46,7 @@ fun Route.ReviewRoutes(service: IServiceReview){
                 val principal = call.principal<JWTPrincipal>()
                 val userId =principal!!.payload.getClaim("id").toString()
                 service.delete(id, userId)
-                call.respondText("Game delete correctly", status = HttpStatusCode.NoContent)
+                call.respondText("Review delete correctly", status = HttpStatusCode.NoContent)
             }
         }
     }

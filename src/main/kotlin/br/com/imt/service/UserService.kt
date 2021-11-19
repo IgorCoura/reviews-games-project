@@ -32,12 +32,12 @@ class UserService(val dao: IDaoUser): IServiceUser {
         dao.insert(user)
     }
 
-    override fun update(obj: UpdateUserDTO) {
+    override fun update(obj: UpdateUserDTO, id: String) {
         //Generate Salt
         val s= ByteArray(16)
         RANDOM.nextBytes(s)
         val salt = String.format("%016x", s)
-        val user = User(obj.id, obj.name, obj.email, obj.password, obj.img, salt)
+        val user = User(id.toInt(), obj.name, obj.email, obj.password, obj.img, salt)
         dao.update(user)
     }
 
@@ -54,7 +54,7 @@ class UserService(val dao: IDaoUser): IServiceUser {
     override fun getWithReviews(id: String): UserWithReviewsDTO {
         val user = dao.getWithReviews(id.toInt())
         val userDTO = UserWithReviewsDTO(user.id, user.name, user.email)
-        userDTO.reviews = user.reviews.map { r -> ReviewUserDTO(r.id, r.gameId, r.userId, r.review, r.score, r.date, GamesSimpleDTO(r.game!!.id, r.game!!.name) )}
+        userDTO.reviews = user.reviews.map { r -> ReviewUserDTO(r.id, r.review, r.score, r.date, GamesSimpleDTO(r.game!!.id, r.game!!.name) )}
         return userDTO
     }
 

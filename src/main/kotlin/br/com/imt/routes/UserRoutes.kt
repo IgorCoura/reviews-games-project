@@ -16,9 +16,6 @@ import java.io.File
 
 fun Route.userRouting(service: IServiceUser){
     route("/user"){
-        var fileDescription = ""
-        var fileName = ""
-        val root = System.getProperty("user.dir") + "/file"
         post("/login"){
             val obj = call.receive<LoginDTO>()
             val token = service.login(obj)
@@ -32,8 +29,10 @@ fun Route.userRouting(service: IServiceUser){
 
        authenticate("auth-user") {
             put {
+                val principal = call.principal<JWTPrincipal>()
+                val id =principal!!.payload.getClaim("id").toString()
                 val obj = call.receive<UpdateUserDTO>()
-                service.update(obj)
+                service.update(obj, id)
                 call.respondText("Game update correctly", status = HttpStatusCode.OK)
             }
             get{
@@ -52,7 +51,7 @@ fun Route.userRouting(service: IServiceUser){
                 val principal = call.principal<JWTPrincipal>()
                 val id =principal!!.payload.getClaim("id").toString()
                 service.delete(id)
-                call.respondText("Game delete correctly", status = HttpStatusCode.NoContent)
+                call.respondText("User delete correctly", status = HttpStatusCode.NoContent)
             }
        }
         authenticate("auth-manager"){
@@ -76,7 +75,7 @@ fun Route.userRouting(service: IServiceUser){
                     status = HttpStatusCode.BadRequest
                 )
                 service.delete(id)
-                call.respondText("Game delete correctly", status = HttpStatusCode.NoContent)
+                call.respondText("User delete correctly", status = HttpStatusCode.NoContent)
             }
        }
 

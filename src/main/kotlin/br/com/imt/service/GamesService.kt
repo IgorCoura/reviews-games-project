@@ -26,7 +26,7 @@ class GamesService(val dao: IDaoGames): IServiceGames {
     override fun get(id: String): GameWithReviewsDTO{
         val g = dao.get(id.toInt())
         val dto = GameWithReviewsDTO(g.id, g.name, g.summary,g.developer,g.genre,g.score,g.img,g.release,g.consoles)
-        dto.reviews = g.reviews?.map{ r -> ReviewGamesDTO(r.id, r.gameId, r.userId, r.review, r.score, r.date, UserDTO(r.user!!.id,r.user!!.name, r.user!!.email) ) }
+        dto.reviews = g.reviews?.map{ r -> ReviewGamesDTO(r.id, r.review, r.score, r.date, UserDTO(r.user!!.id,r.user!!.name, r.user!!.email) ) }
         return dto;
     }
 
