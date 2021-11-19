@@ -1,20 +1,24 @@
 package br.com.imt.routes
 
-import br.com.imt.JwtConfig
-import br.com.imt.dto.*
+import br.com.imt.dto.CreateUserDTO
+import br.com.imt.dto.LoginDTO
+import br.com.imt.dto.UpdateUserDTO
 import br.com.imt.interfaces.IServiceUser
-import br.com.imt.models.User
-import com.auth0.jwt.JWT
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
 import io.ktor.http.*
+import io.ktor.http.content.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
+import java.io.File
 
 fun Route.userRouting(service: IServiceUser){
     route("/user"){
+        var fileDescription = ""
+        var fileName = ""
+        val root = System.getProperty("user.dir") + "/file"
         post("/login"){
             val obj = call.receive<LoginDTO>()
             val token = service.login(obj)
@@ -25,6 +29,7 @@ fun Route.userRouting(service: IServiceUser){
             service.insert(obj)
             call.respondText("User stored correctly", status = HttpStatusCode.Created)
         }
+
        authenticate("auth-user") {
             put {
                 val obj = call.receive<UpdateUserDTO>()

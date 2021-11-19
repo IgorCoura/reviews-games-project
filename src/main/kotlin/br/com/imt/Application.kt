@@ -14,12 +14,13 @@ import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
 import io.ktor.features.*
+import io.ktor.http.*
 import io.ktor.serialization.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 
 fun main() {
-    embeddedServer(Netty, port = System.getenv("PORT").toInt()) {
+    embeddedServer(Netty, (System.getenv("PORT")?:"8080").toInt()) {
         module()
     }.start(wait = true)
 }
@@ -29,6 +30,12 @@ fun Application.module(){
     val connectionString = "jdbc:sqlite:ReviewsGamesDbV2.db"
     install(ContentNegotiation){
         json()
+    }
+    install(CORS){
+        anyHost()
+        header(HttpHeaders.ContentType)
+        header(HttpHeaders.Authorization)
+        allowCredentials = true
     }
     install(Authentication){
         jwt("auth-user") {
