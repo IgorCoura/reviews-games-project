@@ -1,1 +1,0 @@
-web: java -cp target/classes/br/com/imt/ApplicationKt.class
