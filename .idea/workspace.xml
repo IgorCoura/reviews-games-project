@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55b6a495-820e-4a27-8e3c-fdb812da657f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReviewsGamesDbV2.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/Application.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/JwtConfig.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dao/GamesDAO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dao/ReviewDAO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dao/UserDAO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/CreateGamesDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/CreateReviewDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/CreateUserDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/GameWithReviewsDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/GamesDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/GamesSimpleDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/LoginDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/ReviewDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/ReviewGamesDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/ReviewUserDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/UpdateReviewDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/UpdateUserDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/UserDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/dto/UserWithReviewsDTO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/interfaces/IDaoGames.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/interfaces/IDaoReview.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/interfaces/IDaoUser.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/interfaces/IServiceGames.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/interfaces/IServiceReview.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/interfaces/IServiceUser.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/models/Games.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/models/Manager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/models/Review.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/models/User.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/routes/GamesRoutes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/routes/ManagerRoutes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/routes/ReviewRoute.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/routes/UserRoutes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/service/GamesService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/service/ReviewService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/imt/service/UserService.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/br/com/imt/ApplicationTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/br-com-imt-reviews-games-project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$module$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$module$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$module$3$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$module$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$module$3$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$module$3$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt$module$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/ApplicationKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/JwtConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dao/GamesDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dao/ReviewDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dao/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateGamesDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateGamesDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateGamesDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateReviewDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateReviewDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateReviewDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateUserDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateUserDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/CreateUserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GameWithReviewsDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GameWithReviewsDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GameWithReviewsDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GamesDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GamesDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GamesDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GamesSimpleDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GamesSimpleDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/GamesSimpleDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/LoginDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/LoginDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/LoginDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewGamesDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewGamesDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewGamesDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewUserDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewUserDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/ReviewUserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UpdateReviewDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UpdateReviewDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UpdateReviewDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UpdateUserDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UpdateUserDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UpdateUserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UserDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UserDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UserWithReviewsDTO$$serializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UserWithReviewsDTO$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/dto/UserWithReviewsDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/interfaces/IDaoGames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/interfaces/IDaoReview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/interfaces/IDaoUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/interfaces/IServiceGames.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/interfaces/IServiceReview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/interfaces/IServiceUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/models/Games.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/models/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/models/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/models/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$GamesRoutes$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$GamesRoutes$1$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$GamesRoutes$1$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$GamesRoutes$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$GamesRoutes$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$GamesRoutes$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$GamesRoutes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt$registerGamesRoutes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/GamesRoutesKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ManagerRoutesKt$ManagerRoutes$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ManagerRoutesKt$ManagerRoutes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ManagerRoutesKt$registerManageRoutes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ManagerRoutesKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt$ReviewRoutes$1$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt$ReviewRoutes$1$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt$ReviewRoutes$1$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt$ReviewRoutes$1$1$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt$ReviewRoutes$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt$ReviewRoutes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt$registerReviewRoutes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/ReviewRouteKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$registerUserRoutes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$3$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$3$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$3$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$4$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$4$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt$userRouting$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/routes/UserRoutesKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/service/GamesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/service/ReviewService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/imt/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/br-com-imt-reviews-games-project.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/br/com/imt/ApplicationTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="21ITklj3JggJEvyB4wIVb1ESpKp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Back-end" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55b6a495-820e-4a27-8e3c-fdb812da657f" name="Changes" comment="" />
+      <created>1637627751435</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637627751435</updated>
+    </task>
+    <servers />
+  </component>
+</project>
