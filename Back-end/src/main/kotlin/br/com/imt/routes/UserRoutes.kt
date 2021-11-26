@@ -13,6 +13,8 @@ import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
 import java.io.File
+import java.nio.file.Files
+import java.nio.file.Paths
 
 fun Route.userRouting(service: IServiceUser){
     route("/user"){
@@ -28,32 +30,57 @@ fun Route.userRouting(service: IServiceUser){
         }
 
        authenticate("auth-user") {
-            put {
-                val principal = call.principal<JWTPrincipal>()
-                val id =principal!!.payload.getClaim("id").toString()
-                val obj = call.receive<UpdateUserDTO>()
-                service.update(obj, id)
-                call.respondText("Game update correctly", status = HttpStatusCode.OK)
-            }
-            get{
-                val principal = call.principal<JWTPrincipal>()
-                val id =principal!!.payload.getClaim("id").toString()
-                val obj = service.get(id)
-                call.respond(obj)
-            }
-            get("/reviews"){
-                val principal = call.principal<JWTPrincipal>()
-                val id =principal!!.payload.getClaim("id").toString()
-                val obj = service.getWithReviews(id)
-                call.respond(obj)
-            }
-            delete() {
-                val principal = call.principal<JWTPrincipal>()
-                val id =principal!!.payload.getClaim("id").toString()
-                service.delete(id)
-                call.respondText("User delete correctly", status = HttpStatusCode.NoContent)
-            }
+           put {
+               val principal = call.principal<JWTPrincipal>()
+               val id = principal!!.payload.getClaim("id").toString()
+               val obj = call.receive<UpdateUserDTO>()
+               service.update(obj, id)
+               call.respondText("Game update correctly", status = HttpStatusCode.OK)
+           }
+           get {
+               val principal = call.principal<JWTPrincipal>()
+               val id = principal!!.payload.getClaim("id").toString()
+               val obj = service.get(id)
+               call.respond(obj)
+           }
+           get("/reviews") {
+               val principal = call.principal<JWTPrincipal>()
+               val id = principal!!.payload.getClaim("id").toString()
+               val obj = service.getWithReviews(id)
+               call.respond(obj)
+           }
+           delete() {
+               val principal = call.principal<JWTPrincipal>()
+               val id = principal!!.payload.getClaim("id").toString()
+               service.delete(id)
+               call.respondText("User delete correctly", status = HttpStatusCode.NoContent)
+           }
+
+           post("/upload") {
+               val multipartData = call.receiveMultipart()
+               val principal = call.principal<JWTPrincipal>()
+               val id = principal!!.payload.getClaim("id").toString()
+               var fileDescription = ""
+               var fileName = ""
+               multipartData.forEachPart { part ->
+                   when (part) {
+                       is PartData.FormItem -> {
+                           fileDescription = part.value
+                       }
+                       is PartData.FileItem -> {
+                           val root = System.getProperty("user.dir") + "/img"
+                           fileName = part.originalFileName as String
+                           val filePath = Paths.get(root, "/users/$id")
+                           Files.createDirectories(filePath)
+                           var fileBytes = part.streamProvider().readBytes()
+                           File("$filePath/$fileName").writeBytes(fileBytes)
+                       }
+                   }
+               }
+               call.respondText("$fileDescription is uploaded")
+           }
        }
+
         authenticate("auth-manager"){
             get("{id}"){
                 val id = call.parameters["id"] ?: return@get call.respondText(

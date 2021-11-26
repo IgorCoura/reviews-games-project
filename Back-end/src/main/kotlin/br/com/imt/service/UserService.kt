@@ -5,6 +5,7 @@ import br.com.imt.dto.*
 import br.com.imt.interfaces.IDaoUser
 import br.com.imt.interfaces.IServiceUser
 import br.com.imt.models.User
+import io.ktor.http.content.*
 import java.math.BigInteger
 import java.security.MessageDigest
 import java.security.SecureRandom
@@ -56,6 +57,10 @@ class UserService(val dao: IDaoUser): IServiceUser {
         val userDTO = UserWithReviewsDTO(user.id, user.name, user.email)
         userDTO.reviews = user.reviews.map { r -> ReviewUserDTO(r.id, r.review, r.score, r.date, GamesSimpleDTO(r.game!!.id, r.game!!.name) )}
         return userDTO
+    }
+
+    override fun updateImg(fileName: String, id: String){
+        dao.updateImg(fileName, id.toInt())
     }
 
     override fun delete(id: String) {
