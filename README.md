@@ -7,19 +7,20 @@ Esse projeto consiste em um back end-de um site de avalição de jogos.
 - src/
     |- main/
         |- kotlin/
+            |- component: Funções utilizadas no sistemas.
             |- dao/ : Conexões com DB, métodos de DBs, etc 
             |- dto/ : Objeto de Transferência de Dados (DTO -> MODELS)
             |- routes/ : Onde é definido as routas de acesso a API.
             |- interfaces/ : qualquer interface usada globalmente na aplicação
             |- models/ : models usados na aplicação
             |- service/ : Onde são definidas as regras de negócio
-            |- Application.kt : Configurações para inicialização da aplicação
-            |- JwtConfig: Configurações do JWT.
+            |- Application.kt : Configurações para inicialização da aplicação            
 ```
 ### Model relacional
 ![alt text](https://github.com/IgorCoura/reviews-games-project/blob/master/img/ModeloRelacionalV2.png)
 
 # Routes
+* A autentição é feita atráves de Bearer Token.
 ### Raiz
 * http://localhost:8080/
 ### Games
@@ -38,6 +39,11 @@ Esse projeto consiste em um back end-de um site de avalição de jogos.
   } 
   Saída esperada -> "Game stored correctly"  
   ```  
+* POST: "/games/upoload/{id}" -> Armazena a foto do jogo. Necessário permissão de User.
+```
+  Entrada esperada -> file
+  Saída esperada-> "'fileName' is uploaded."
+```  
 * PUT: "/games" -> Atualizar as informações de um jogo. Necessário permissão de Manager.
   ```
   Entrada esperada -> 
@@ -100,6 +106,10 @@ Esse projeto consiste em um back end-de um site de avalição de jogos.
     },
   ]
   ``` 
+* GET: "/games/img/{id}" -> Recupera a imagem do jogo.
+```  
+  Saída esperada -> fileName.png
+``` 
 * DELETE: "/games/{id}" -> Deletar um jogo existente. Necessário permissão de Manager.
  ```
  Saída esperada -> "Game delete correctly" 
@@ -168,6 +178,11 @@ Esse projeto consiste em um back end-de um site de avalição de jogos.
   }
   Saída esperada -> "User stored correctly"  
   ``` 
+* POST: "/user/upoload" -> Armazena a foto de perfil do usuario. Necessário permissão de User.
+```
+  Entrada esperada -> file
+  Saída esperada-> "'fileName' is uploaded."
+```
 * PUT: "/user" -> Atualiza as informações do usuário. Necessário permissão de User.
    ```
   Entrada esperada -> 
@@ -180,6 +195,10 @@ Esse projeto consiste em um back end-de um site de avalição de jogos.
   }
   Saída esperada -> "User update correctly"  
   ``` 
+* GET: "/user/img/{id}" -> Recupera a imagem de perfil do usuario.
+```  
+  Saída esperada -> fileName.png
+``` 
 * GET: "/user" -> Recupera o usuário.
  ```
   Saída esperada -> 
