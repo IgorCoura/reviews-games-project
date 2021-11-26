@@ -3,13 +3,11 @@ package br.com.imt
 import br.com.imt.dao.GamesDAO
 import br.com.imt.dao.ReviewDAO
 import br.com.imt.dao.UserDAO
-import br.com.imt.routes.registerGamesRoutes
-import br.com.imt.routes.registerManageRoutes
-import br.com.imt.routes.registerReviewRoutes
-import br.com.imt.routes.registerUserRoutes
+import br.com.imt.routes.*
 import br.com.imt.service.GamesService
 import br.com.imt.service.ReviewService
 import br.com.imt.service.UserService
+import br.com.imt.component.JwtComponent
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
@@ -39,15 +37,15 @@ fun Application.module(){
     }
     install(Authentication){
         jwt("auth-user") {
-            realm = JwtConfig.realmUser
-            verifier(JwtConfig.userJwtVerifier)
+            realm = JwtComponent.realmUser
+            verifier(JwtComponent.userJwtVerifier)
             validate { credential ->
                     JWTPrincipal(credential.payload)
             }
         }
         jwt ("auth-manager"){
-            realm = JwtConfig.realmManager
-            verifier(JwtConfig.managerJwtVerifier)
+            realm = JwtComponent.realmManager
+            verifier(JwtComponent.managerJwtVerifier)
             validate { credential ->
                 JWTPrincipal(credential.payload)
             }

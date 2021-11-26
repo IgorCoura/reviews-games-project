@@ -14,5 +14,5 @@ interface IDaoUser {
     fun getAll(): List<User>
     fun getWithReviews(id: Int): User
     fun getSalt(email:String): String
-    fun updateImg(fileName: String, id: Int)
+    fun updateImg(filePath: String, id: Int)
 }

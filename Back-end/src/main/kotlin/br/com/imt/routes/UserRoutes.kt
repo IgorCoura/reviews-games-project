@@ -8,13 +8,9 @@ import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.auth.jwt.*
 import io.ktor.http.*
-import io.ktor.http.content.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
-import java.io.File
-import java.nio.file.Files
-import java.nio.file.Paths
 
 fun Route.userRouting(service: IServiceUser){
     route("/user"){
@@ -28,7 +24,6 @@ fun Route.userRouting(service: IServiceUser){
             service.insert(obj)
             call.respondText("User stored correctly", status = HttpStatusCode.Created)
         }
-
        authenticate("auth-user") {
            put {
                val principal = call.principal<JWTPrincipal>()
@@ -55,29 +50,12 @@ fun Route.userRouting(service: IServiceUser){
                service.delete(id)
                call.respondText("User delete correctly", status = HttpStatusCode.NoContent)
            }
-
            post("/upload") {
                val multipartData = call.receiveMultipart()
                val principal = call.principal<JWTPrincipal>()
                val id = principal!!.payload.getClaim("id").toString()
-               var fileDescription = ""
-               var fileName = ""
-               multipartData.forEachPart { part ->
-                   when (part) {
-                       is PartData.FormItem -> {
-                           fileDescription = part.value
-                       }
-                       is PartData.FileItem -> {
-                           val root = System.getProperty("user.dir") + "/img"
-                           fileName = part.originalFileName as String
-                           val filePath = Paths.get(root, "/users/$id")
-                           Files.createDirectories(filePath)
-                           var fileBytes = part.streamProvider().readBytes()
-                           File("$filePath/$fileName").writeBytes(fileBytes)
-                       }
-                   }
-               }
-               call.respondText("$fileDescription is uploaded")
+               val filaName = service.saveImg(multipartData, id)
+               call.respondText("$filaName is uploaded")
            }
        }
 
@@ -105,6 +83,16 @@ fun Route.userRouting(service: IServiceUser){
                 call.respondText("User delete correctly", status = HttpStatusCode.NoContent)
             }
        }
+
+        get("/img/{id}"){
+            val id = call.parameters["id"] ?: return@get call.respondText(
+                "Missing or malformed id",
+                status = HttpStatusCode.BadRequest
+            )
+            val file = service.getImg(id)
+            call.respondFile(file)
+
+        }
 
     }
 }

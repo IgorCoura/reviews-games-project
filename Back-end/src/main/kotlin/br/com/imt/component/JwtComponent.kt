@@ -1,20 +1,13 @@
-package br.com.imt
+package br.com.imt.component
 
 import br.com.imt.models.Manager
 import br.com.imt.models.User
-import com.auth0.jwk.JwkProviderBuilder
 import com.auth0.jwt.JWT
 
-import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
-import java.security.KeyFactory
-import java.security.interfaces.RSAPrivateKey
-import java.security.interfaces.RSAPublicKey
-import java.security.spec.PKCS8EncodedKeySpec
 import java.util.*
-import java.util.concurrent.TimeUnit
 
-object JwtConfig {
+object JwtComponent {
     private const val secret = "supersegredo"
     private const val issuer = "http://0.0.0.0:8080/"
     const val userAudience = "http://0.0.0.0:8080/user"

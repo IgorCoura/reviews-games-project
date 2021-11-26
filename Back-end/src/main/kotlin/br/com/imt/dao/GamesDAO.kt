@@ -44,6 +44,19 @@ class GamesDAO (val connectionString: String): IDaoGames {
         connection.close()
     }
 
+    override fun updateImg(filePath: String,id: Int) {
+        val connection = DriverManager.getConnection(connectionString)
+        val preparedStatement = connection.prepareStatement("""
+            UPDATE Games 
+            SET Img=?
+            WHERE Id = ?;
+            """.trimMargin())
+        preparedStatement.setString(1, filePath)
+        preparedStatement.setInt(2, id)
+        preparedStatement.executeUpdate()
+        connection.close()
+    }
+
     override fun delete(id: Int) {
         val connection = DriverManager.getConnection(connectionString)
         val preparedStatement = connection.prepareStatement("""

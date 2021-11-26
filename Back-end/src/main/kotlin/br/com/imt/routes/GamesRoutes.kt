@@ -3,14 +3,14 @@ package br.com.imt.routes
 import br.com.imt.dto.CreateGamesDTO
 import br.com.imt.dto.GamesDTO
 import br.com.imt.interfaces.IServiceGames
+import br.com.imt.component.FileComponent
 import io.ktor.application.*
 import io.ktor.auth.*
+import io.ktor.auth.jwt.*
 import io.ktor.http.*
-import io.ktor.http.content.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
-import java.io.File
 
 fun Route.GamesRoutes(service: IServiceGames){
     route("/games"){
@@ -33,25 +33,17 @@ fun Route.GamesRoutes(service: IServiceGames){
                 service.delete(id)
                 call.respondText("Game delete correctly", status = HttpStatusCode.NoContent)
             }
-        }
-        post("/upload"){
-            val multipartData = call.receiveMultipart()
-            var fileDescription = ""
-            var fileName = ""
-            multipartData.forEachPart { part ->
-                when (part) {
-                    is PartData.FormItem -> {
-                        fileDescription = part.value
-                    }
-                    is PartData.FileItem -> {
-                        fileName = part.originalFileName as String
-                        var fileBytes = part.streamProvider().readBytes()
-                        File("img/games/$fileName").writeBytes(fileBytes)
-                    }
-                }
+            post("/upload/{id}"){
+                val multipartData = call.receiveMultipart()
+                val id = call.parameters["id"] ?: return@post call.respondText(
+                    "Missing or malformed id",
+                    status = HttpStatusCode.BadRequest
+                )
+                val filaName = service.saveImg(multipartData, id)
+                call.respondText("$filaName is uploaded")
             }
-            call.respondText("$fileDescription is uploaded")
         }
+
         get{
             val obj = service.getAll()
             call.respond(obj)
@@ -63,6 +55,14 @@ fun Route.GamesRoutes(service: IServiceGames){
             )
             val obj = service.get(id)
             call.respond(obj)
+        }
+        get("/img/{id}"){
+            val id = call.parameters["id"] ?: return@get call.respondText(
+                "Missing or malformed id",
+                status = HttpStatusCode.BadRequest
+            )
+            val file = service.getImg(id)
+            call.respondFile(file)
         }
 
     }
