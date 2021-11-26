@@ -1,10 +1,13 @@
 package br.com.imt.service
 
-import br.com.imt.JwtConfig
+import br.com.imt.component.JwtComponent
 import br.com.imt.dto.*
 import br.com.imt.interfaces.IDaoUser
 import br.com.imt.interfaces.IServiceUser
 import br.com.imt.models.User
+import br.com.imt.component.FileComponent
+import io.ktor.http.content.*
+import java.io.File
 import java.math.BigInteger
 import java.security.MessageDigest
 import java.security.SecureRandom
@@ -18,7 +21,7 @@ class UserService(val dao: IDaoUser): IServiceUser {
         val salt = dao.getSalt(login.email)
         val hash = md5Hash(login.password+salt)
         val user = dao.get(login.email, hash)
-        return JwtConfig.userGenerateToken(user)
+        return JwtComponent.userGenerateToken(user)
     }
 
     override fun insert(obj: CreateUserDTO) {
@@ -58,8 +61,26 @@ class UserService(val dao: IDaoUser): IServiceUser {
         return userDTO
     }
 
+
     override fun delete(id: String) {
         dao.delete(id.toInt())
+    }
+
+    override fun getImg(id: String): File {
+        var user: User? = null
+        try{
+            user = dao.get(id.toInt())
+        }catch (e: Exception){
+            println(e.message)
+        }
+        return FileComponent.recoverFile(user?.img?: "/img/default/default.png" )
+    }
+
+    override suspend fun saveImg(multipartData: MultiPartData, id: String): String{
+        val path = "/img/users/$id"
+        val fileName = FileComponent.saveFile(multipartData, path)
+        dao.updateImg("$path/$fileName",id.toInt())
+        return fileName
     }
 
     fun md5Hash(str: String): String {

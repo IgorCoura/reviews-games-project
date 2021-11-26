@@ -1,6 +1,6 @@
 package br.com.imt.routes
 
-import br.com.imt.JwtConfig
+import br.com.imt.component.JwtComponent
 import br.com.imt.dto.LoginDTO
 import br.com.imt.models.Manager
 import io.ktor.application.*
@@ -14,7 +14,7 @@ fun Route.ManagerRoutes(){
         post {
             val obj = call.receive<LoginDTO>()
             if (obj.email == "root" && obj.password=="root"){
-                val token = JwtConfig.managerGenerateToken(Manager(1, "Root", "root", "root"))
+                val token = JwtComponent.managerGenerateToken(Manager(1, "Root", "root", "root"))
                 call.respond(hashMapOf("token" to token))
             }
             else{

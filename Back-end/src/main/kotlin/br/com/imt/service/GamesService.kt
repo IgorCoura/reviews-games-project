@@ -4,6 +4,9 @@ import br.com.imt.dto.*
 import br.com.imt.interfaces.IDaoGames
 import br.com.imt.interfaces.IServiceGames
 import br.com.imt.models.Games
+import br.com.imt.component.FileComponent
+import io.ktor.http.content.*
+import java.io.File
 
 
 class GamesService(val dao: IDaoGames): IServiceGames {
@@ -32,5 +35,22 @@ class GamesService(val dao: IDaoGames): IServiceGames {
 
     override fun delete(id: String){
         dao.delete(id.toInt())
+    }
+
+    override fun getImg(id: String): File {
+        var game: Games? = null
+        try{
+            game = dao.get(id.toInt())
+        }catch (e: Exception){
+            println(e.message)
+        }
+        return FileComponent.recoverFile(game?.img?: "/img/default/default.png" )
+    }
+
+    override suspend fun saveImg(multipartData: MultiPartData, id: String): String{
+        val path = "/img/games/$id"
+        val fileName = FileComponent.saveFile(multipartData, path)
+        dao.updateImg("$path/$fileName",id.toInt())
+        return fileName
     }
 }
