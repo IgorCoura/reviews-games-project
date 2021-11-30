@@ -1,16 +1,22 @@
-# game_review
+# reviews-games-project
+Trabalho T3 e T4 da matéria ECM251-Linguagens de Programação I.
 
-A new Flutter project.
+Esse projeto consiste em um back-end, um front-end e sua integração de um site de avaliação de jogos.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Telas do FrontEnd
+As telas foram implementadas através do Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+<p float="center">
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/Tela1.png" width="272" />
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/Tela2.png" width="272" />
+</p>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+As telas abaixo repetem os padrões para os diferentes jogos presentes na HomePage.
+<p float="center">
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela3.png" width="272" />
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela4.png" width="272" />
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela5.png" width="272" /> 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+</p>
+
