@@ -2,7 +2,7 @@
 Trabalho T3 e T4 da matéria linguagens de programação.
 Esse projeto consiste em um back end-de um site de avalição de jogos.
 
-# Desing 
+# Design 
 ```
 - src/
     |- main/
@@ -270,3 +270,21 @@ Esse projeto consiste em um back end-de um site de avalição de jogos.
      "token": "text"
   }
   ``` 
+
+# Telas do FrontEnd
+As telas foram implementadas através do Flutter.
+
+<p float="center">
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/Tela1.png" width="272" />
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/Tela2.png" width="272" />
+</p>
+
+As telas abaixo repetem os padrões para os diferentes jogos.
+<p float="center">
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela3.png" width="272" />
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela4.png" width="272" />
+  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela5.png" width="272" /> 
+
+</p>
+
+
