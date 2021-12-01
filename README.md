@@ -278,7 +278,9 @@ Esse projeto consiste em site de avaliação de jogos dividido em duas partes, b
      "token": "text"
   }
   ``` 
-
+  
+# Telas do FrontEnd
+As telas foram implementadas através do Flutter.
 
 <p float="center">
   <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela1.png" width="272" />
