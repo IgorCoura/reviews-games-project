@@ -1,7 +1,7 @@
 # reviews-games-project
 Trabalho T3 e T4 da matéria ECM251-Linguagens de Programação I.
 
-Grupo: 404- Not found
+Grupo: 404- Not found; 
 Integrantes: 
  Guilherme Cury Galli RA:19.00374-9; 
 Igor Eiki RA:19.02466-5; 
