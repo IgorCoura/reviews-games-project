@@ -1,6 +1,6 @@
 # reviews-games-project
 Trabalho T3 e T4 da matéria linguagens de programação.
-Esse projeto consiste em um back end-de um site de avalição de jogos.
+Esse projeto consiste em um backend de um app de avalição de jogos.
 
 # Desing 
 ```
