@@ -8,7 +8,7 @@ Igor Eiki RA: 19.02466-5
 Fernando Laiser RA: 19.01336-0  
 Igor de Brito Coura RA: 19.00165-7    
 
-Esse projeto consiste em um back-end, um front-end e sua integração de um site de avaliação de jogos.
+Esse projeto consiste em site de avaliação de jogos dividido em duas partes, backend e frontend.
 
 # Design 
 ```
