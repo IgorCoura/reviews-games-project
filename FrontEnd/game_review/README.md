@@ -1,7 +1,7 @@
 # reviews-games-project
 Trabalho T3 e T4 da matéria ECM251-Linguagens de Programação I.
 
-Esse projeto consiste em um back-end, um front-end e sua integração de um site de avaliação de jogos.
+Esse projeto consiste em front-end de um app de avaliação de jogos.
 
 
 # Telas do FrontEnd
