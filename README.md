@@ -279,20 +279,33 @@ Esse projeto consiste em site de avaliação de jogos dividido em duas partes, b
   }
   ``` 
 
-# Telas do FrontEnd
-As telas foram implementadas através do Flutter.
 
 <p float="center">
-  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/Tela1.png" width="272" />
-  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/Tela2.png" width="272" />
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela1.png" width="272" />
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela2.png" width="272" />
 </p>
 
 As telas abaixo repetem os padrões para os diferentes jogos presentes na HomePage.
 <p float="center">
-  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela3.png" width="272" />
-  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela4.png" width="272" />
-  <img src="https://github.com/Igor-Kubota/TesteFolders/blob/master/img/tela5.png" width="272" /> 
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela3.png" width="272" />
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela4.png" width="272" />
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela5.png" width="272" /> 
+</p>
 
+Telas dos demais jogos inclusos na HomePage:
+<p float="center">
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela6.png" width="272" />
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela7.png" width="272" />
+</p>
+
+<p float="center">
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela8.png" width="272" />
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela9.png" width="272" />
+</p>
+
+<p float="center">
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela10.png" width="272" />
+  <img src="https://github.com/IgorCoura/reviews-games-project/blob/kubotafront/img/Tela11.png" width="272" />
 </p>
 
 
